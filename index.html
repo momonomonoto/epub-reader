@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Epub Reader — Read EPUB files beautifully in Chrome</title>
+    <meta name="description" content="Epub Reader lets you open and read EPUB books directly in your Chrome browser. Clean typography, bookmarks, and a distraction‑free experience." />
+
+    <meta property="og:title" content="Epub Reader" />
+    <meta property="og:description" content="Open and read EPUB books beautifully in your Chrome browser." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#hero">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a href="#top" class="brand" aria-label="Epub Reader home">
+          <span class="brand-mark" aria-hidden="true">📚</span>
+          <span class="brand-name">Epub Reader</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li class="install-desktop">
+              <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://chromewebstore.google.com/detail/epub-reader/jcpbllkjfpgkigjgaojmmhmcmafblcca">Install on Chrome</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Read EPUB books beautifully in your browser</h1>
+            <p class="subtitle">Epub Reader opens .epub files instantly with crisp typography, dark mode, and a distraction‑free experience inside Chrome.</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" href="https://chromewebstore.google.com/detail/epub-reader/jcpbllkjfpgkigjgaojmmhmcmafblcca">Install on Chrome</a>
+              <a class="btn btn-ghost btn-lg" href="#pricing">Pricing</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <!-- Inline SVG illustration -->
+            <svg class="hero-svg" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized book illustration">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7C3AED" />
+                  <stop offset="50%" stop-color="#3B82F6" />
+                  <stop offset="100%" stop-color="#06B6D4" />
+                </linearGradient>
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.25" />
+                </filter>
+              </defs>
+              <rect x="60" y="80" width="520" height="320" rx="28" fill="url(#g1)" filter="url(#shadow)" />
+              <rect x="90" y="110" width="230" height="260" rx="12" fill="#fff" opacity="0.95" />
+              <rect x="320" y="110" width="230" height="260" rx="12" fill="#0b1220" opacity="0.2" />
+              <path d="M90 140 h230" stroke="#E5E7EB" stroke-width="6" stroke-linecap="round" />
+              <path d="M90 170 h180" stroke="#E5E7EB" stroke-width="6" stroke-linecap="round" />
+              <path d="M320 140 h170" stroke="#D1D5DB" stroke-width="6" stroke-linecap="round" />
+              <circle cx="505" cy="335" r="14" fill="#22D3EE" />
+              <circle cx="475" cy="335" r="8" fill="#A78BFA" />
+              <circle cx="445" cy="335" r="5" fill="#60A5FA" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="benefits">
+        <div class="container">
+          <h2>Why Epub Reader</h2>
+          <p class="section-sub">Modern features for a smooth reading experience.</p>
+          <div class="benefits-grid">
+            <article class="benefit-card">
+              <div class="benefit-icon" aria-hidden="true">⚡</div>
+              <h3>Instant open</h3>
+              <p>Open .epub files directly in Chrome without extra steps.</p>
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-icon" aria-hidden="true">🌓</div>
+              <h3>Great typography</h3>
+              <p>Crisp fonts and layout for long, comfortable reading.</p>
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-icon" aria-hidden="true">🎛️</div>
+              <h3>Flexible customization</h3>
+              <p>Adjust fonts, sizes, spacing, and themes to make reading your own.</p>
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-icon" aria-hidden="true">📁</div>
+              <h3>EPUB support</h3>
+              <p>Optimized for the popular EPUB format used by most ebooks.</p>
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-icon" aria-hidden="true">🎯</div>
+              <h3>Focused UI</h3>
+              <p>A distraction‑free reader that keeps you in the flow.</p>
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-icon" aria-hidden="true">🔁</div>
+              <h3>Continuous updates</h3>
+              <p>Ongoing improvements and compatibility fixes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="container">
+          <h2>Simple pricing</h2>
+          <p class="section-sub">Choose a plan that suits your reading.</p>
+          <div class="pricing-grid">
+            <article class="card">
+              <div class="card-body">
+                <h3 class="plan">Monthly</h3>
+                <p class="price"><span class="amount">$1</span><span class="cycle">/month</span></p>
+                <ul class="features">
+                  <li>Full Epub Reader</li>
+                  <li>Updates included</li>
+                  <li>Cancel anytime</li>
+                </ul>
+                <a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="https://chromewebstore.google.com/detail/epub-reader/jcpbllkjfpgkigjgaojmmhmcmafblcca">Install on Chrome</a>
+              </div>
+            </article>
+            <article class="card card-accent">
+              <div class="badge">Best value</div>
+              <div class="card-body">
+                <h3 class="plan">Yearly</h3>
+                <p class="price"><span class="amount">$12</span><span class="cycle">/year</span></p>
+                <ul class="features">
+                  <li>Everything in Monthly</li>
+                  <li>One simple annual payment</li>
+                  <li>Priority updates</li>
+                </ul>
+                <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://chromewebstore.google.com/detail/epub-reader/jcpbllkjfpgkigjgaojmmhmcmafblcca">Install on Chrome</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="feedback" class="feedback">
+        <div class="container">
+          <h2>Feedback</h2>
+          <p class="section-sub">Tell us what you think or report an issue.</p>
+          <form id="feedback-form" class="form" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required />
+              <div class="error" id="err-name" aria-live="polite"></div>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+              <div class="error" id="err-email" aria-live="polite"></div>
+            </div>
+            <div class="form-row">
+              <label for="message">Feedback</label>
+              <textarea id="message" name="message" rows="6" placeholder="Share your thoughts…" required></textarea>
+              <div class="error" id="err-message" aria-live="polite"></div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send feedback</button>
+              <p class="form-note">This opens your email app with a pre‑filled message to <a href="mailto:monomonomoto@gmail.com">monomonomoto@gmail.com</a>.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid-two">
+        <div class="footer-left">
+          <h4>About</h4>
+          <ul>
+            <li>Captain Works Ltd.</li>
+            <li>111 Fulham Palace Road</li>
+            <li>London, United Kingdom, W6 8JA</li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <h4>Legal</h4>
+          <ul>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://appstack.pro/agreement">Terms of Service</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://appstack.pro/privacy">Privacy Notice</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://appstack.pro/refunds">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="contact-strip">
+      <div class="container">
+        <p>Contact us: <a href="mailto:monomonomoto@gmail.com">monomonomoto@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- Sticky install button on mobile -->
+    <a class="fab-cta" target="_blank" rel="noopener noreferrer" href="https://chromewebstore.google.com/detail/epub-reader/jcpbllkjfpgkigjgaojmmhmcmafblcca">Install on Chrome</a>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+
