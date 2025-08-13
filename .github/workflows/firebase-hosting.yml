@@ -25,6 +25,6 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
           firebase use epub-ce393 --token "$FIREBASE_TOKEN"
-          firebase deploy --only hosting --non-interactive --token "$FIREBASE_TOKEN"
+          firebase deploy --only hosting,firestore:rules --non-interactive --token "$FIREBASE_TOKEN"
 
 
