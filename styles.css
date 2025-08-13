@@ -189,11 +189,12 @@ section { padding: 88px 0; }
   border: 1px solid var(--card-stroke);
   background: var(--card-bg);
   border-radius: 16px;
-  padding: 18px;
+  padding: 22px;
+  min-height: 200px;
   box-shadow: var(--shadow-1);
 }
 .benefit-icon { font-size: 24px; }
-.benefit-card h3 { margin: 8px 0 6px; color: var(--text-900); }
+.benefit-card h3 { margin: 10px 0 14px; color: var(--text-900); }
 .benefit-card p { margin: 0; color: var(--text-700); }
 
 .pricing-grid {
