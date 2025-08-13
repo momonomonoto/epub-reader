@@ -14,7 +14,32 @@ if (yearSpan) {
   yearSpan.textContent = String(new Date().getFullYear());
 }
 
-// Feedback form -> mailto draft with validation
+// Firebase (web v9 modular)
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js';
+import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBVV0ooUY1U-KGVmIrM8oTqwk8lKN3jYvE",
+  authDomain: "epub-ce393.firebaseapp.com",
+  projectId: "epub-ce393",
+  storageBucket: "epub-ce393.firebasestorage.app",
+  messagingSenderId: "49807630057",
+  appId: "1:49807630057:web:b1e02710d8857bc2b89a78",
+  measurementId: "G-XHWNVRWFYQ"
+};
+
+let db;
+try {
+  const app = initializeApp(firebaseConfig);
+  // Analytics is optional; ignore errors if not available in some environments
+  try { getAnalytics(app); } catch (_) {}
+  db = getFirestore(app);
+} catch (e) {
+  console.error('Failed to initialize Firebase', e);
+}
+
+// Feedback form -> validate, then send to Firestore and open mailto draft
 const form = document.getElementById('feedback-form');
 if (form) {
   form.addEventListener('submit', (event) => {
@@ -52,16 +77,37 @@ if (form) {
     }
     if (!isValid) return;
 
-    const subject = encodeURIComponent('Epub Reader feedback');
-    const bodyLines = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      '',
-      message,
-    ];
-    const body = encodeURIComponent(bodyLines.join('\n'));
-    const mailto = `mailto:monomonomoto@gmail.com?subject=${subject}&body=${body}`;
-    window.location.href = mailto;
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton) submitButton.disabled = true;
+
+    // Align field names with Firestore (email, name, feedback)
+    const payload = { name, email, feedback: message, createdAt: serverTimestamp() };
+    const showToast = (text) => {
+      const toast = document.getElementById('toast');
+      if (!toast) return;
+      toast.textContent = text;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2800);
+    };
+    const afterSend = () => {
+      if (submitButton) submitButton.disabled = false;
+      form.reset();
+      showToast('Спасибо, отправлено');
+    };
+
+    if (db) {
+      addDoc(collection(db, 'feedback'), payload)
+        .then(afterSend)
+        .catch((err) => {
+          console.error('Failed to submit feedback to Firestore', err);
+          if (submitButton) submitButton.disabled = false;
+          showToast('Не удалось отправить. Попробуйте позже');
+        });
+    } else {
+      if (submitButton) submitButton.disabled = false;
+      showToast('Не удалось подключиться к серверу');
+    }
+
   });
 }
 

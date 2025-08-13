@@ -328,6 +328,26 @@ section { padding: 88px 0; }
 .footer-bottom { border-top: 1px solid #e5e7eb; padding: 12px 0 20px; color: var(--text-700); }
 .contact-strip { background: var(--bg-100); border-top: 1px solid #e5e7eb; padding: 14px 0; color: var(--text-700); }
 
+/* Toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%) translateY(120%);
+  background: #0b1220;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.25);
+  opacity: 0;
+  transition: transform 300ms ease, opacity 300ms ease;
+  z-index: 70;
+}
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
 /* Floating CTA for mobile */
 .fab-cta {
   position: fixed;
