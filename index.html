@@ -48,36 +48,17 @@
       <section id="hero" class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <h1>Read EPUB  1 books beautifully in your browser</h1>
+            <h1>Read EPUB books beautifully in your browser</h1>
             <p class="subtitle">Epub Reader opens .epub files instantly with crisp typography, dark mode, and a distraction‑free experience inside Chrome.</p>
             <div class="hero-cta">
               <a class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" href="https://chromewebstore.google.com/detail/epub-reader/jcpbllkjfpgkigjgaojmmhmcmafblcca">Install on Chrome</a>
               <a class="btn btn-ghost btn-lg" href="#pricing">Pricing</a>
             </div>
           </div>
-          <div class="hero-art" aria-hidden="true">
-            <!-- Inline SVG illustration -->
-            <svg class="hero-svg" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized book illustration">
-              <defs>
-                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#7C3AED" />
-                  <stop offset="50%" stop-color="#3B82F6" />
-                  <stop offset="100%" stop-color="#06B6D4" />
-                </linearGradient>
-                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.25" />
-                </filter>
-              </defs>
-              <rect x="60" y="80" width="520" height="320" rx="28" fill="url(#g1)" filter="url(#shadow)" />
-              <rect x="90" y="110" width="230" height="260" rx="12" fill="#fff" opacity="0.95" />
-              <rect x="320" y="110" width="230" height="260" rx="12" fill="#0b1220" opacity="0.2" />
-              <path d="M90 140 h230" stroke="#E5E7EB" stroke-width="6" stroke-linecap="round" />
-              <path d="M90 170 h180" stroke="#E5E7EB" stroke-width="6" stroke-linecap="round" />
-              <path d="M320 140 h170" stroke="#D1D5DB" stroke-width="6" stroke-linecap="round" />
-              <circle cx="505" cy="335" r="14" fill="#22D3EE" />
-              <circle cx="475" cy="335" r="8" fill="#A78BFA" />
-              <circle cx="445" cy="335" r="5" fill="#60A5FA" />
-            </svg>
+          <div class="hero-art">
+            <a href="https://chromewebstore.google.com/detail/epub-reader/jcpbllkjfpgkigjgaojmmhmcmafblcca" target="_blank" rel="noopener noreferrer" aria-label="Install Epub Reader on Chrome">
+              <img src="./preview.png" alt="Epub Reader preview" class="hero-img" loading="eager" decoding="async" />
+            </a>
           </div>
         </div>
       </section>
@@ -157,30 +138,9 @@
 
       <section id="feedback" class="feedback">
         <div class="container">
-          <h2>Feedback</h2>
-          <p class="section-sub">Tell us what you think or report an issue.</p>
-          <form id="feedback-form" class="form" novalidate>
-            <div class="form-row">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required />
-              <div class="error" id="err-name" aria-live="polite"></div>
-            </div>
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required />
-              <div class="error" id="err-email" aria-live="polite"></div>
-            </div>
-            <div class="form-row">
-              <label for="message">Feedback</label>
-              <textarea id="message" name="message" rows="6" placeholder="Share your thoughts…" required></textarea>
-              <div class="error" id="err-message" aria-live="polite"></div>
-            </div>
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary btn-lg">Send feedback</button>
-              <p class="form-note">This opens your email app with a pre‑filled message to <a href="mailto:monomonomoto@gmail.com">monomonomoto@gmail.com</a>.</p>
-            </div>
-          </form>
-        </div>
+          <div class="form-embed">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeLVYtj53Fvb-oM96n8rzK-7lv_W7le2l6yQbEeDyOxiEaKg/viewform?embedded=true" width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
       </section>
     </main>
 

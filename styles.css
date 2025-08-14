@@ -178,9 +178,10 @@ body {
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-art { display: grid; place-items: center; }
 .hero-svg { width: 100%; max-width: 520px; height: auto; filter: drop-shadow(0 12px 24px rgba(2,6,23,0.08)); }
+.hero-img { width: 100%; max-width: 520px; height: auto; border-radius: 18px; box-shadow: 0 12px 28px rgba(2,6,23,0.12); }
 
 /* Sections */
-section { padding: 88px 0; }
+section { padding: 70px 0; }
 .pricing h2, .feedback h2, .benefits h2 { color: var(--text-900); margin: 0 0 6px; }
 .section-sub { color: var(--text-500); margin: 0 0 22px; }
 
@@ -308,6 +309,14 @@ section { padding: 88px 0; }
 .error { color: #fca5a5; font-size: 13px; min-height: 18px; }
 .form-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .form-note { color: var(--text-500); margin: 0; }
+
+.form-embed iframe {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: var(--shadow-1);
+}
 
 /* Footer */
 .site-footer {
