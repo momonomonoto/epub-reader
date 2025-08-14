@@ -73,7 +73,7 @@ body {
   gap: 10px;
   text-decoration: none;
 }
-.brand-mark { font-size: 20px; }
+.brand-icon { width: 22px; height: 22px; border-radius: 4px; display: block; }
 .brand-name {
   color: var(--text-900);
   font-weight: 700;
