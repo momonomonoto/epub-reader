@@ -259,7 +259,6 @@ section { padding: 70px 0; }
   border-radius: 999px;
   display: inline-block;
   background:
-    radial-gradient(circle at 6px 9px, #22c55e 3px, #22c55e 3px, #22c55e 4px, transparent 5px),
     linear-gradient(180deg, #a78bfa, #7c3aed);
 }
 
